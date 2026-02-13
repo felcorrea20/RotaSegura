@@ -32,11 +32,11 @@ public abstract class Veiculo {
 
     public void registrarRota(double quilometragem) {
 
-        this.situacao = SituacaoVeiculo.EM_ROTA;
-
         if (quilometragem < 0) {
             throw new QuilometragemNegativaException();
         }
+
+        this.situacao = SituacaoVeiculo.EM_ROTA;
 
         this.quilometragemAtual += quilometragem;
 
